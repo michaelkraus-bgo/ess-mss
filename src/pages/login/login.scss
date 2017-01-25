@@ -1,0 +1,96 @@
+page-login {
+  $PRIMARY: map-get($colors, primary);
+  $SECONDARY: map-get($colors, secondary);
+  $LIGHTEST: map-get($colors, lightest);
+
+  .content{
+    background: #2274ac; /* Old browsers */
+    background: -moz-linear-gradient(top,  #2274ac 0%, #01aee8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #2274ac 0%,#01aee8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #2274ac 0%,#01aee8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2274ac', endColorstr='#01aee8',GradientType=0 ); /* IE6-9 */
+  }
+
+.app-icon {
+  color: $LIGHTEST;
+  font-size: 20rem;
+  padding: 5rem 5rem 2rem 5rem;
+}
+  .scroll-content {
+    text-align: center;
+  }
+
+  ion-list {
+    /* width: 30rem; */
+    padding: 5rem;
+  }
+
+  .list {
+    margin: 0 auto;
+  }
+
+  .item {
+    background-color: $PRIMARY;
+    color: $LIGHTEST;
+  }
+
+  .list > .item-block:first-child,
+  .list > .item-block:last-child,
+  .list > .item-block {
+    border: 2px solid $LIGHTEST;
+    border-radius: 30px;
+    margin: 0 0 15px 0;
+  }
+
+  .list .item-block .item-inner {
+    border-bottom: none;
+  }
+
+  .button {
+    contain: none;
+    background-color: $LIGHTEST;
+    border: 2px solid $LIGHTEST;
+    border-radius: 30px;
+    color: $PRIMARY;
+    width: 100%;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,.5);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,.5);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,.5);
+  }
+
+  .button.activated {
+
+    background-color: $PRIMARY;
+    color: $LIGHTEST;
+  }
+
+  .button-inner {
+    font-size: 1.8rem;
+  }
+
+  p {
+    color: $LIGHTEST;
+    font-weight: normal;
+  }
+
+  input.text-input::-webkit-input-placeholder {
+    color: $LIGHTEST;
+    font-weight: normal;
+  }
+  input.text-input:-ms-input-placeholder {
+    color: $LIGHTEST;
+    font-weight: normal;
+  }
+  input.text-input::-moz-placeholder {
+    color: $LIGHTEST;
+    opacity: 1;
+    font-weight: normal;
+  }
+  input.text-input:-moz-placeholder {
+    color: $LIGHTEST;
+    opacity: 1;
+    font-weight: normal;
+  }
+
+
+}

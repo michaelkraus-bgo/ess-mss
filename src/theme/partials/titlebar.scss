@@ -1,0 +1,17 @@
+@import "../variables";
+
+$PRIMARY: map-get($colors, primary);
+$LIGHTEST: map-get($colors, lightest);
+
+.toolbar-background  {
+  background-color: $PRIMARY;
+}
+
+.toolbar-title {
+  color: $LIGHTEST;
+  font-weight: normal;
+}
+
+.bar-button-default {
+  color: $LIGHTEST;
+}
