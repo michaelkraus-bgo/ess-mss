@@ -1,6 +1,8 @@
 import { NgModule, ErrorHandler } from '@angular/core';
+import { HttpModule, Http } from '@angular/http';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate';
 
 /* PAGES */
 import { TabsPage } from '../pages/tabs/tabs';
@@ -26,6 +28,9 @@ import { AccordionComponent } from '../components/accordion.component';
 /* SERVICES */
 import { PaymentService} from '../providers/payment.service';
 
+export function createTranslateLoader(http: Http) {
+  return new TranslateStaticLoader(http, './assets/i18n', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -49,7 +54,13 @@ import { PaymentService} from '../providers/payment.service';
     AccordionComponent
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    HttpModule,
+    IonicModule.forRoot(MyApp),
+    TranslateModule.forRoot({
+      provide: TranslateLoader,
+      useFactory: (createTranslateLoader),
+      deps: [Http]
+    }),
   ],
   bootstrap: [IonicApp],
   entryComponents: [

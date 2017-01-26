@@ -12,37 +12,36 @@ import { ProfileContactPage } from '../profile/profile-contact';
 })
 
 export class ProfilePage {
-  title: string = "Mein Profil";
-pages: Array<{title: string, icon:string, subtitle:string, subicon:string, page:Object }> = [
-  {
-    title: "Arbeitszeit",
-    icon: "time",
-    subtitle: "Lorem ipsum.",
-    subicon: "information-circle-outline",
-    page: ProfileWorkPage
-  },
-  {
-    title: "Urlaub & Abwesenheit",
-    icon: "plane",
-    subtitle: "Lorem ipsum.",
-    subicon: "information-circle-outline",
-    page: ProfileHolidayPage
-  },
-  {
-    title: "Entgeldnachweis",
-    icon: "cash",
-    subtitle: "Lorem ipsum.",
-    subicon: "information-circle-outline",
-    page: ProfileMoneyPage
-  },
-  {
-    title: "Ansprechpartner",
-    icon: "person",
-    subtitle: "Lorem ipsum.",
-    subicon: "information-circle-outline",
-    page: ProfileContactPage
-  }
-];
+  pages: Array<{title: string, icon:string, subtitle:string, subicon:string, page:Object }> = [
+    {
+      title: "Arbeitszeit",
+      icon: "time",
+      subtitle: "Lorem ipsum.",
+      subicon: "information-circle-outline",
+      page: ProfileWorkPage
+    },
+    {
+      title: "Urlaub & Abwesenheit",
+      icon: "plane",
+      subtitle: "Lorem ipsum.",
+      subicon: "information-circle-outline",
+      page: ProfileHolidayPage
+    },
+    {
+      title: "Entgeldnachweis",
+      icon: "cash",
+      subtitle: "Lorem ipsum.",
+      subicon: "information-circle-outline",
+      page: ProfileMoneyPage
+    },
+    {
+      title: "Ansprechpartner",
+      icon: "person",
+      subtitle: "Lorem ipsum.",
+      subicon: "information-circle-outline",
+      page: ProfileContactPage
+    }
+  ];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 

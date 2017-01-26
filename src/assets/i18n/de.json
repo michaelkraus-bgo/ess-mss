@@ -1,0 +1,17 @@
+{
+  "HUB": {
+    "TITLE": "Meine Infos"
+  },
+  "TEAM": {
+    "TITLE": "Mein Team"
+  },
+  "WORK": {
+    "TITLE": "Meine Arbeit"
+  },
+  "PROFILE": {
+    "TITLE": "Meine Profil"
+  },
+  "SETTINGS": {
+    "TITLE": "Einstellungen"
+  }
+}

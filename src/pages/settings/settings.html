@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Einstellungen</ion-title>
+    <ion-title>{{ 'SETTINGS.TITLE' | translate }}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -17,6 +17,14 @@
     <ion-item>
       <ion-label>Benachrichtigungen</ion-label>
       <ion-toggle></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Sprache</ion-label>
+      <ion-select [(ngModel)]="language" (ionChange)="setLanguage()">
+        <ion-option value="de">deutsch</ion-option>
+        <ion-option value="en">englisch</ion-option>
+      </ion-select>
     </ion-item>
 
     <ion-item>

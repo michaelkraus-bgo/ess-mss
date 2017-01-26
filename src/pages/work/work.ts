@@ -8,7 +8,6 @@ import { WorkProblemsPage } from '../work/work-problems';
   templateUrl: 'work.html'
 })
 export class WorkPage {
-  title: string = "Meine Arbeit";
   pages: Array<{title: string, icon:string, subtitle:string, subicon:string, page:Object }> = [
     {
       title: "Ansprechpartner",

@@ -9,7 +9,6 @@ import { TeamHolidayPage } from '../team/team-holiday';
 })
 
 export class TeamPage {
-  title: string = "Mein Team";
   pages: Array<{title: string, icon:string, subtitle:string, subicon:string, page:Object }> = [
     {
       title: "Teammitglieder",
