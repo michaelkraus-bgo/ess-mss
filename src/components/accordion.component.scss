@@ -1,0 +1,54 @@
+accordion {
+  .input-wrapper {
+    display:block;
+  }
+
+  .item.item-block .item-inner {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .item {
+    padding-left: 0;
+  }
+
+  .item ion-icon[item-right] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 16px;
+  }
+
+  .item .label {
+    padding-left: 16px;
+  }
+
+  .card {
+    border-radius: 0;
+    margin: 0;
+    width: 100%;
+    background-color: #F1F1F1;
+  }
+
+  .card-content {
+    padding: 0;
+  }
+
+  .card .list .item {
+    padding: 0 24px 0 0;
+    background-color: transparent;
+    min-height: 2rem;
+  }
+
+  .card .list .item .label,
+  .card .list .item .note {
+    font-size: 1.2rem;
+    color: #000;
+  }
+
+  .card .list > .item-block:first-child,
+  .card .list > .item-block:last-child {
+    border: none;
+  }
+
+}

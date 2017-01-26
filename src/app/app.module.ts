@@ -20,7 +20,11 @@ import { ProfileContactPage } from '../pages/profile/profile-contact';
 import { SettingsPage } from '../pages/settings/settings';
 
 /* COMPONENTS */
-import { ListItemComponent} from '../components/listitem.component';
+import { ListItemComponent } from '../components/listitem.component';
+import { AccordionComponent } from '../components/accordion.component';
+
+/* SERVICES */
+import { PaymentService} from '../providers/payment.service';
 
 
 @NgModule({
@@ -41,7 +45,8 @@ import { ListItemComponent} from '../components/listitem.component';
     ProfileMoneyPage,
     ProfileContactPage,
     SettingsPage,
-    ListItemComponent
+    ListItemComponent,
+    AccordionComponent
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -65,6 +70,6 @@ import { ListItemComponent} from '../components/listitem.component';
     ProfileContactPage,
     SettingsPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, PaymentService]
 })
 export class AppModule {}

@@ -13,18 +13,18 @@ export class TeamPage {
   title: string = "Mein Team";
   pages: Array<{title: string, icon:string, subtitle:string, subicon:string, page:Object }> = [
     {
-      "title": "Teammitglieder",
-      "icon": "contacts",
-      "subtitle": "10 Mitarbeiter",
-      "subicon": "person",
-      "page": TeamMembersPage
+      title: "Teammitglieder",
+      icon: "contacts",
+      subtitle: "10 Mitarbeiter",
+      subicon: "person",
+      page: TeamMembersPage
     },
     {
-      "title": "Jahresurlaub",
-      "icon": "calendar",
-      "subtitle": "2016",
-      "subicon": "calendar-outline",
-      "page": TeamHolidayPage
+      title: "Jahresurlaub",
+      icon: "calendar",
+      subtitle: "2016",
+      subicon: "calendar-outline",
+      page: TeamHolidayPage
     }
   ];
 

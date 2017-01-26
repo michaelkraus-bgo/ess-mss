@@ -11,18 +11,18 @@ export class WorkPage {
   title: string = "Meine Arbeit";
   pages: Array<{title: string, icon:string, subtitle:string, subicon:string, page:Object }> = [
     {
-      "title": "Ansprechpartner",
-      "icon": "person",
-      "subtitle": "Siehe Kontakte",
-      "subicon": "information-circle-outline",
-      "page": WorkContactPage
+      title: "Ansprechpartner",
+      icon: "person",
+      subtitle: "Siehe Kontakte",
+      subicon: "information-circle-outline",
+      page: WorkContactPage
     },
     {
-      "title": "Störmeldung",
-      "icon": "alert-outline",
-      "subtitle": "Aktuell keine Störungen",
-      "subicon": "information-circle-outline",
-      "page": WorkProblemsPage
+      title: "Störmeldung",
+      icon: "alert-outline",
+      subtitle: "Aktuell keine Störungen",
+      subicon: "information-circle-outline",
+      page: WorkProblemsPage
     }
   ];
 

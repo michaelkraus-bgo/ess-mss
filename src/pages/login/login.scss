@@ -4,25 +4,26 @@ page-login {
   $LIGHTEST: map-get($colors, lightest);
 
   .content{
-    background: #2274ac; /* Old browsers */
-    background: -moz-linear-gradient(top,  #2274ac 0%, #01aee8 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  #2274ac 0%,#01aee8 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  #2274ac 0%,#01aee8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2274ac', endColorstr='#01aee8',GradientType=0 ); /* IE6-9 */
+    background: $PRIMARY;
+    background: -moz-linear-gradient(top, $PRIMARY 0%, #01aee8 100%);
+    background: -webkit-linear-gradient(top, $PRIMARY 0%,#01aee8 100%);
+    background: linear-gradient(to bottom, $PRIMARY 0%,#01aee8 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$PRIMARY', endColorstr='$SECONDARY',GradientType=0 );
   }
 
-.app-icon {
-  color: $LIGHTEST;
-  font-size: 20rem;
-  padding: 5rem 5rem 2rem 5rem;
-}
+  .app-icon {
+    color: $LIGHTEST;
+    font-size: 20rem;
+    padding: 5rem 5rem 2rem 5rem;
+  }
+
   .scroll-content {
     text-align: center;
   }
 
   ion-list {
-    /* width: 30rem; */
     padding: 5rem;
+    max-width: 40rem;
   }
 
   .list {
@@ -59,7 +60,6 @@ page-login {
   }
 
   .button.activated {
-
     background-color: $PRIMARY;
     color: $LIGHTEST;
   }
@@ -68,7 +68,7 @@ page-login {
     font-size: 1.8rem;
   }
 
-  p {
+  .pw-reset {
     color: $LIGHTEST;
     font-weight: normal;
   }
@@ -77,20 +77,22 @@ page-login {
     color: $LIGHTEST;
     font-weight: normal;
   }
+
   input.text-input:-ms-input-placeholder {
     color: $LIGHTEST;
     font-weight: normal;
   }
+
   input.text-input::-moz-placeholder {
     color: $LIGHTEST;
     opacity: 1;
     font-weight: normal;
   }
+
   input.text-input:-moz-placeholder {
     color: $LIGHTEST;
     opacity: 1;
     font-weight: normal;
   }
-
 
 }

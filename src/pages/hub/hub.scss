@@ -82,4 +82,9 @@ page-hub {
     top: 15rem;
   }
 
+  .card-content + .item {
+    border-top: 1px solid lightgrey;
+    padding-top: 0.5rem;
+  }
+
 }

@@ -1,22 +1,30 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
 
-/*
-  Generated class for the ProfileMoney page.
+import { AccordionComponent } from '../../components/accordion.component';
+import { PaymentService} from '../../providers/payment.service';
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-profile-money',
-  templateUrl: 'profile-money.html'
+  templateUrl: 'profile-money.html',
+   providers: [PaymentService]
 })
+
 export class ProfileMoneyPage {
+  title: string = "Entgeldnachweis";
+  paymentData: Array<{title: string, items: Array<{title: string, detailsVisible: boolean, details: Array<{key: string, value: string}>}> }> = null;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(private paymentService: PaymentService) {
+    this.getPaymentData();
+  }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ProfileMoneyPage');
+  getPaymentData(){
+    this.paymentService.getLocalData()
+      .then(data => {
+        this.paymentData = data;
+      })
+      .catch(error => {
+        console.log(error);
+      })
   }
 
 }
