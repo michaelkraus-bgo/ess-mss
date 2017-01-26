@@ -1,0 +1,36 @@
+list-item {
+  $PRIMARY: map-get($colors, primary);
+  $LIGHT: map-get($colors, light);
+  $DARK: map-get($colors, dark);
+
+  .item {
+    border-bottom: 1px solid $LIGHT;
+  }
+
+  .item-inner {
+    border-bottom: 0 !important;
+  }
+
+  .input-wrapper {
+    display: block;
+  }
+
+  .item > .item-icon {
+    font-size: 6rem;
+    color: $PRIMARY;
+    min-width: 55px;
+  }
+
+  .label {
+    margin: 18px 8px 5px 0;
+  }
+
+  div[item-content] {
+    font-size: 1.2rem;
+    color: $DARK;
+  }
+
+  div[item-content] .icon {
+    margin: 0 5px 0 0;
+  }
+}

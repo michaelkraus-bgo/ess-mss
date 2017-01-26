@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { TeamMembersPage } from '../team/team-members';
 import { TeamHolidayPage } from '../team/team-holiday';
-import { ListItemComponent} from '../../components/listitem.component';
 
 @Component({
   selector: 'page-team',

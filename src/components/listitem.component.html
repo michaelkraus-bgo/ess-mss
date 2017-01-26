@@ -1,8 +1,8 @@
-<ion-item>
-  <ion-avatar item-left>
-    <ion-icon name="{{ icon }}"></ion-icon>
-  </ion-avatar>
-  <h2>{{ title }}</h2>
-  <p class="subheader"><ion-icon name="{{ subicon }}" item-left></ion-icon>{{ subtitle }}</p>
-  <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+<ion-item detail-push>
+  <ion-icon name="{{ icon }}" item-left></ion-icon>
+  <ion-label>{{ title }}</ion-label>
+  <div item-content>
+    <ion-icon name="{{ subicon }}" item-left></ion-icon>
+    {{ subtitle }}
+  </div>
 </ion-item>

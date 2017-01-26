@@ -1,4 +1,8 @@
 accordion {
+  $SECONDARY: map-get($colors, secondary);
+  $DARKEST: map-get($colors, darkest);
+  $LIGHTER: map-get($colors, lighter);
+
   .input-wrapper {
     display:block;
   }
@@ -27,11 +31,27 @@ accordion {
     border-radius: 0;
     margin: 0;
     width: 100%;
-    background-color: #F1F1F1;
+    background-color: $LIGHTER;
   }
 
   .card-content {
     padding: 0;
+    text-align: center;
+  }
+
+  .button {
+    border-radius: 30px;
+    margin: 10px 0 20px 0;
+    background-color: $SECONDARY;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,.5);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,.5);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,.5);
+  }
+
+  .card .list .item:first-child .label,
+  .card .list .item:first-child .note {
+    font-size: 1.8rem;
+    font-weight: bold;
   }
 
   .card .list .item {
@@ -43,7 +63,7 @@ accordion {
   .card .list .item .label,
   .card .list .item .note {
     font-size: 1.2rem;
-    color: #000;
+    color: $DARKEST;
   }
 
   .card .list > .item-block:first-child,

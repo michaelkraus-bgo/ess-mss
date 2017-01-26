@@ -14,4 +14,8 @@ export class AccordionComponent {
     item.detailsVisible = !item.detailsVisible;
   }
 
+  download(){
+    console.log("download");
+  }
+
 }

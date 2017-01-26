@@ -9,6 +9,6 @@
 
 <ion-content>
   <ion-list>
-    <list-item *ngFor="let page of pages" title="{{ page.title }}" icon="{{ page.icon }}" subtitle="{{ page.subtitle }}" subicon="{{ page.subicon }}" (click)="goToPage(page.page)"></list-item>
+    <list-item *ngFor="let page of pages" [title]="page.title" [icon]="page.icon" [subtitle]="page.subtitle" [subicon]="page.subicon" (click)="goToPage(page.page)"></list-item>
   </ion-list>
 </ion-content>

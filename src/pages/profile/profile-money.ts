@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 
-import { AccordionComponent } from '../../components/accordion.component';
 import { PaymentService} from '../../providers/payment.service';
 
 @Component({
