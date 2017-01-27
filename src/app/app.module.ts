@@ -27,6 +27,7 @@ import { AccordionComponent } from '../components/accordion.component';
 
 /* SERVICES */
 import { PaymentService} from '../providers/payment.service';
+import { RedditService } from '../providers/reddit.service';
 
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');
@@ -81,6 +82,6 @@ export function createTranslateLoader(http: Http) {
     ProfileContactPage,
     SettingsPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, PaymentService]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, PaymentService, RedditService]
 })
 export class AppModule {}

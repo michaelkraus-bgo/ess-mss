@@ -46,52 +46,24 @@
     </ion-fab-list>
   </ion-fab>
 
-
-  <ion-card>
-    <img src="assets/img/card-amsterdam.png"/>
-    <ion-card-header>
-      Amsterdam
-    </ion-card-header>
-
-
-    <ion-row>
-      <ion-col left text-left center>
-        <ion-note>11h ago</ion-note>
-      </ion-col>
-      <ion-col right text-right center>
-        <button ion-button icon-right clear small>
-          <ion-icon name="heart-outline"></ion-icon>
-        </button>
-      </ion-col>
-    </ion-row>
-  </ion-card>
-
-
-  <ion-card>
-    <ion-card-header>
-      Amsterdam
-    </ion-card-header>
-    <ion-card-content>
-    <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-  </ion-card-content>
-  <ion-item>
-    <ion-avatar item-left>
-      <img src="assets/img/venkman.jpg">
-    </ion-avatar>
-    <h2>Marty McFly</h2>
-  </ion-item>
-    <ion-row>
-      <ion-col left text-left center>
-        <ion-note>11h ago</ion-note>
-      </ion-col>
-      <ion-col right text-right center>
-        <button ion-button icon-right clear small>
-          <ion-icon name="heart-outline"></ion-icon>
-        </button>
-      </ion-col>
-    </ion-row>
-  </ion-card>
-
-
+   <ion-list *ngIf="data">
+     <ion-card *ngFor="let post of data.children">
+       <img src="{{ post.data.preview.images[0].source.url }}"/>
+       <ion-card-header>
+         {{ post.data.title }}
+       </ion-card-header>
+       <ion-row>
+         <ion-col left text-left center padding>
+           <ion-note>{{ post.data.created * 1000 | date:'dd.MM.yyyy' }}</ion-note>
+         </ion-col>
+         <ion-col right text-right center padding>
+           <button ion-button icon-right clear small no-padding>
+             <ion-note>{{ post.data.ups }}</ion-note>
+             <ion-icon name="heart"></ion-icon>
+           </button>
+         </ion-col>
+       </ion-row>
+     </ion-card>
+   </ion-list>
 
 </ion-content>

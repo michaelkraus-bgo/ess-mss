@@ -1,17 +1,30 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+
+import { RedditService } from '../../providers/reddit.service';
 
 @Component({
   selector: 'page-hub',
-  templateUrl: 'hub.html'
+  templateUrl: 'hub.html',
+  providers: [RedditService]
 })
 
 export class HubPage {
+  data: Object = null;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(private redditService: RedditService) { }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad HubPage');
+    this.getReditData();
+  }
+
+  getReditData(){
+    this.redditService.getRemoteData()
+    .then(data => {
+      this.data = data;
+    })
+    .catch(error => {
+      console.log(error);
+    });
   }
 
 }

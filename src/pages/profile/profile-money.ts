@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { PaymentService} from '../../providers/payment.service';
+import { PaymentService } from '../../providers/payment.service';
 
 @Component({
   selector: 'page-profile-money',
