@@ -14,7 +14,7 @@ export class RedditService {
     }
 
     return new Promise(resolve => {
-      this.http.get('https://www.reddit.com/r/pics/hot.json?limit=15')
+      this.http.get('https://www.reddit.com/r/pics/hot.json?limit=5')
       .map(res => res.json())
       .subscribe(data => {
         this.data = data.data;

@@ -12,7 +12,8 @@ page-hub {
   .card.user-card{
     border-radius: 0;
     width: 100%;
-    margin: 0 0 25px 0;
+    margin: 0 0 30px 0;
+    padding: 0 0 10px 0;
     box-shadow: none;
     background: $PRIMARY;
     background: -moz-linear-gradient(top, $PRIMARY 0%, $SECONDARY 100%);
@@ -40,38 +41,31 @@ page-hub {
     background-color: transparent;
   }
 
-  .card.user-card .item ion-avatar {
-    min-width: 63px;
-    min-height: 63px;
-  }
-
   .card.user-card .item ion-avatar img {
     width: 63px;
     height: 63px;
   }
 
-  .card.user-card .item {
-    background-color: transparent;
+  .card.user-card .item .input-wrapper {
+    display: block;
   }
 
-  .card.user-card .label h2 {
+
+  .card.user-card .label {
     font-weight: normal;
     color: $LIGHTEST;
   }
 
-  .card.user-card .label .job-holder {
+  .card.user-card .job-holder,
+  .card.user-card .place-holder {
     color: $LIGHTEST;
     font-weight: lighter;
-    font-style: italic;
     font-size: 1.2rem;
     margin: 5px 0;
   }
 
-  .card.user-card .label .place-holder {
-    color: $LIGHTEST;
-    font-weight: lighter;
-    font-size: 1.2rem;
-    margin: 5px 0;
+  .card.user-card .job-holder {
+    font-style: italic;
   }
 
   .card.user-card .item-ios ion-icon[item-left] {
@@ -79,12 +73,11 @@ page-hub {
   }
 
   ion-fab {
-    top: 15rem;
+    top: 16rem;
   }
 
-  .card-content + .item {
-    border-top: 1px solid lightgrey;
-    padding-top: 0.5rem;
+  .fab-in-list {
+    background-color: $PRIMARY;
+    color: $LIGHTEST;
   }
-
 }
