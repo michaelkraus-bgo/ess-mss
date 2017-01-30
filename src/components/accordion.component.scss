@@ -1,6 +1,7 @@
 accordion {
   $SECONDARY: map-get($colors, secondary);
   $DARKEST: map-get($colors, darkest);
+  $LIGHT: map-get($colors, light);
   $LIGHTER: map-get($colors, lighter);
 
   .input-wrapper {
@@ -14,17 +15,20 @@ accordion {
 
   .item {
     padding-left: 0;
-  }
 
-  .item ion-icon[item-right] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-right: 16px;
-  }
+    ion-icon[item-right] {
+      position: absolute;
+      font-size: 2.2rem;
+      top: 0;
+      right: 0;
+      margin-right: 16px;
+      margin-top: 11px;
+      color: $LIGHT;
+    }
 
-  .item .label {
-    padding-left: 16px;
+    .label {
+      padding-left: 16px;
+    }
   }
 
   .card {
@@ -32,6 +36,31 @@ accordion {
     margin: 0;
     width: 100%;
     background-color: $LIGHTER;
+
+    .list {
+      .item:first-child .label,
+      .item:first-child .note {
+        font-size: 1.8rem;
+        font-weight: bold;
+      }
+
+      .item {
+        padding: 0 24px 0 0;
+        background-color: transparent;
+        min-height: 2rem;
+
+        .label,
+        .note {
+          font-size: 1.2rem;
+          color: $DARKEST;
+        }
+      }
+
+      > .item-block:first-child,
+      > .item-block:last-child {
+        border: none;
+      }
+    }
   }
 
   .card-content {
@@ -46,29 +75,6 @@ accordion {
     -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,.5);
     -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,.5);
     box-shadow: 0px 0px 15px 0px rgba(0,0,0,.5);
-  }
-
-  .card .list .item:first-child .label,
-  .card .list .item:first-child .note {
-    font-size: 1.8rem;
-    font-weight: bold;
-  }
-
-  .card .list .item {
-    padding: 0 24px 0 0;
-    background-color: transparent;
-    min-height: 2rem;
-  }
-
-  .card .list .item .label,
-  .card .list .item .note {
-    font-size: 1.2rem;
-    color: $DARKEST;
-  }
-
-  .card .list > .item-block:first-child,
-  .card .list > .item-block:last-child {
-    border: none;
   }
 
 }

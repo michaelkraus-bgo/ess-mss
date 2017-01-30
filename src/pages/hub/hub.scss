@@ -23,53 +23,52 @@ page-hub {
     -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,.5);
     -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,.5);
     box-shadow: 0px 0px 15px 0px rgba(0,0,0,.5);
-  }
 
-  .card.user-card .card-header {
-    text-align: center;
-    color: $LIGHTEST;
-    font-size: 2.5rem;
-    font-weight: normal;
-    margin: 1rem 0 2.5rem 0;
-  }
+    .card-header {
+      text-align: center;
+      color: $LIGHTEST;
+      font-size: 2.5rem;
+      font-weight: normal;
+      margin: 1rem 0 2.5rem 0;
+    }
 
-  .card.user-card .card-content {
-    padding: 0;
-  }
+    .card-content {
+      padding: 0;
+    }
 
-  .card.user-card .item {
-    background-color: transparent;
-  }
+    .item {
+      background-color: transparent;
 
-  .card.user-card .item ion-avatar img {
-    width: 63px;
-    height: 63px;
-  }
+      .item ion-avatar img {
+        width: 63px;
+        height: 63px;
+      }
 
-  .card.user-card .item .input-wrapper {
-    display: block;
-  }
+      .input-wrapper {
+        display: block;
+      }
 
+      ion-icon[item-left] {
+        margin: 0 5px 0 0;
+      }
+    }
 
-  .card.user-card .label {
-    font-weight: normal;
-    color: $LIGHTEST;
-  }
+    .label {
+      font-weight: normal;
+      color: $LIGHTEST;
+    }
 
-  .card.user-card .job-holder,
-  .card.user-card .place-holder {
-    color: $LIGHTEST;
-    font-weight: lighter;
-    font-size: 1.2rem;
-    margin: 5px 0;
-  }
+    .job-holder,
+    .place-holder {
+      color: $LIGHTEST;
+      font-weight: lighter;
+      font-size: 1.2rem;
+      margin: 5px 0;
+    }
 
-  .card.user-card .job-holder {
-    font-style: italic;
-  }
-
-  .card.user-card .item-ios ion-icon[item-left] {
-    margin: 0 5px 0 0;
+    .job-holder {
+      font-style: italic;
+    }
   }
 
   ion-fab {
@@ -79,5 +78,10 @@ page-hub {
   .fab-in-list {
     background-color: $PRIMARY;
     color: $LIGHTEST;
+  }
+
+  .fab-list-active .fab-in-list.activated {
+    background-color: $LIGHTEST;
+    color: $PRIMARY;
   }
 }

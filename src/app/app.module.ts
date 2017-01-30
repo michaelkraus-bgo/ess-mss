@@ -29,6 +29,9 @@ import { AccordionComponent } from '../components/accordion.component';
 import { PaymentService} from '../providers/payment.service';
 import { RedditService } from '../providers/reddit.service';
 
+/* PIPES */
+import { CapitalizePipe } from '../pipes/capitalize.pipe';
+
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');
 }
@@ -52,7 +55,8 @@ export function createTranslateLoader(http: Http) {
     ProfileContactPage,
     SettingsPage,
     ListItemComponent,
-    AccordionComponent
+    AccordionComponent,
+    CapitalizePipe
   ],
   imports: [
     HttpModule,

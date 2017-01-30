@@ -28,6 +28,10 @@ page-login {
 
   .list {
     margin: 0 auto;
+
+    .item-block .item-inner {
+      border-bottom: none;
+    }
   }
 
   .item {
@@ -41,10 +45,6 @@ page-login {
     border: 2px solid $LIGHTEST;
     border-radius: 30px;
     margin: 0 0 15px 0;
-  }
-
-  .list .item-block .item-inner {
-    border-bottom: none;
   }
 
   .button {

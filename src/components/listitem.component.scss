@@ -5,6 +5,12 @@ list-item {
 
   .item {
     border-bottom: 1px solid $LIGHT;
+
+    > .item-icon {
+      font-size: 6rem;
+      color: $PRIMARY;
+      min-width: 55px;
+    }
   }
 
   .item-inner {
@@ -15,12 +21,6 @@ list-item {
     display: block;
   }
 
-  .item > .item-icon {
-    font-size: 6rem;
-    color: $PRIMARY;
-    min-width: 55px;
-  }
-
   .label {
     margin: 18px 8px 5px 0;
   }
@@ -28,9 +28,9 @@ list-item {
   div[item-content] {
     font-size: 1.2rem;
     color: $DARK;
-  }
 
-  div[item-content] .icon {
-    margin: 0 5px 0 0;
+    .icon {
+      margin: 0 5px 0 0;
+    }
   }
 }
